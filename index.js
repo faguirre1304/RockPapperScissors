@@ -2,8 +2,10 @@
 
 let scoreFinal = 0,
   computerScore = 0,
-  target = "",
-  userPoint = 0;
+  userPoints = 0;
+
+let whoWin = document.querySelector("#whoWin");
+let userScore = document.querySelector("#userScore");
 
 //function take the value of the user option
 
@@ -11,7 +13,8 @@ let btns = document.querySelectorAll("#Btn");
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let target = btn.value;
-    return console.log(target);
+
+    userTarget(target);
   });
 });
 
@@ -26,17 +29,25 @@ function computerRandomChoice() {
 
   return computerChoice;
 }
+let computerSelection = computerRandomChoice();
 
-let computerOption = computerRandomChoice();
+// estancado aca con la funcion que retorna el boton del usuario
 
-let userOption = userChoice();
+function userTarget(userChoice) {
+  let userSelection = userChoice;
+  return userSelection;
+}
 
-//start the game
+let userSelectionNew = userTarget();
+console.log(userSelectionNew);
 
-function game() {
-  if (userOption === "rock" && computerOption === "paper") {
-    console.log("User Point");
+function playingRound(userSelection, computerSelection) {
+  console.log(computerSelection);
+  if (userSelection === "rock" && computerSelection === "scissors") {
+    whoWin.textContent = "User Win";
+    userPoints++;
+    userScore.textContent = userPoints;
   }
 }
 
-console.log(game());
+//start the game

@@ -143,14 +143,14 @@ body {
 }
 
 .game__box {
-  margin: auto;
+  margin: 0 auto;
   height: 100vh;
   max-width: 1200px;
   /* background-color: aqua; */
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
   flex-flow: column nowrap;
 }
 
@@ -175,14 +175,15 @@ body {
 }
 .playing__box {
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .box__round {
-  width: 200px;
-  min-height: 200px;
+  width: 150px;
+  min-height: 150px;
   background-color: chocolate;
   display: flex;
+  padding: 1rem;
   flex-flow: column nowrap;
   gap: 1rem;
 }
@@ -200,14 +201,16 @@ body {
 }
 
 .user__box {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
 .btn {
-  width: 200px;
-  min-height: 200px;
+  width: 150px;
+  min-height: 150px;
   border: none;
   background: none;
   cursor: pointer;
@@ -219,8 +222,8 @@ body {
 }
 
 .sign {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
